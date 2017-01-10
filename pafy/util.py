@@ -15,8 +15,10 @@ from . import g
 
 
 mswin = os.name == "nt"
-not_utf8_environment = mswin or "UTF-8" not in sys.stdout.encoding
-
+try:
+    not_utf8_environment = mswin or "UTF-8" not in sys.stdout.encoding
+except TypeError:
+    not_utf8_environment = False
 
 class GdataError(Exception):
     """Gdata query failed."""
