@@ -13,7 +13,7 @@ from setuptools import setup
 from pafy import __version__
 
 setup(
-    name='pafy',
+    name='livingbio-pafy',
     packages=['pafy'],
     scripts=['scripts/ytdl'],
     version=__version__,
